@@ -1,0 +1,304 @@
+/* === General Styles === */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Raleway:wght@400;600;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    background: linear-gradient(to right, #fff5f8, #ffe3e9);
+    color: #2c3e50;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* === Header Section Refinement === */
+header {
+    background: linear-gradient(to right, #c04848, #480048);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+    max-width: 80%;
+    margin: 20px auto;
+    border-radius: 10px;
+    line-height: 1.2;
+}
+
+/* === Header Subtitle Styling === */
+header p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.1em;
+    text-transform: none;
+    margin-top: 10px;
+    color: #ffe3e9;
+    letter-spacing: 0.5px;
+}
+
+/* === Title Responsiveness === */
+@media (max-width: 1024px) {
+    header {
+        font-size: 2em;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        font-size: 1.8em;
+        padding: 20px 15px;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 1.5em;
+        padding: 15px 10px;
+    }
+
+    header p {
+        font-size: 0.9em;
+    }
+}
+
+
+/* === Navigation Bar === */
+nav {
+    background: #6a0dad;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 10px 0;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 5px 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background: #ffafcc;
+    color: #6a0dad;
+    transform: translateY(-2px);
+}
+
+/* === Main Section === */
+main {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    justify-items: center;
+    align-items: start;
+}
+
+/* === Section Styling === */
+section {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+section h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8em;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #6a0dad;
+    border-bottom: 2px solid #ffafcc;
+    padding-bottom: 5px;
+}
+
+/* === Forms === */
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 15px;
+    justify-items: center;
+}
+
+form label {
+    font-weight: bold;
+    color: #6a0dad;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 3px;
+}
+
+form input,
+form select,
+form textarea {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.9em;
+    transition: border 0.3s ease;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #ffafcc;
+    outline: none;
+}
+
+form button {
+    width: 90%;
+    background: #6a0dad;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+form button:hover {
+    background: #9b51e0;
+    transform: translateY(-2px);
+}
+
+/* === Two-Column Section Layout === */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 10px;
+    align-items: stretch;
+}
+
+.container .box {
+    background: #fff8fb;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.container .box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.container .box h3 {
+    text-align: center;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: #6a0dad;
+}
+
+/* === Footer === */
+footer {
+    text-align: center;
+    background: linear-gradient(to right, #6a0dad, #480048);
+    color: white;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 0.9em;
+}
+
+/* === Animations === */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* === Responsive Design === */
+@media (max-width: 1024px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        font-size: 2em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section h2 {
+        font-size: 1.4em;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 1.8em;
+    }
+
+    section h2 {
+        font-size: 1.2em;
+    }
+
+    form button {
+        width: 100%;
+    }
+}
